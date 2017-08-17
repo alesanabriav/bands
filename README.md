@@ -1,6 +1,6 @@
 # my band
 get info about your bands
 
-## apis
+## open apis
 - itunes
 - bandsintown
