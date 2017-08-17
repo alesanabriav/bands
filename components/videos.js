@@ -3,10 +3,6 @@ import Minigrid from 'minigrid';
 
 class Videos extends Component {
 
-  componentDidMount() {
-
-  }
-
   render() {
     const {props} = this;
     return (
@@ -15,7 +11,7 @@ class Videos extends Component {
         <div className="row cards__video">
 
           {props.videos.map(video =>
-            <div className="col-lg-2">
+            <div key={video.trackId} className="col-lg-2">
               <div className="card card--video">
                 <div
                   style={{backgroundImage: `url(${video.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%'}}

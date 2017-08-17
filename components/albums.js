@@ -11,7 +11,7 @@ class Albums extends Component {
         <h4 className="section__title">Albums</h4>
         <div className="row">
           {albums.map(album =>
-            <div className="col-lg-2">
+            <div key={album.collectionId} className="col-lg-2">
               <div className="card card--album" >
                 <div
                   className="card-img-top"

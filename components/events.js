@@ -10,7 +10,7 @@ class Events extends Component {
         <h4 className="section__title">Events</h4>
         <div className="row">
           {events.map(event =>
-            <div className="col-lg-3">
+            <div key={event.id} className="col-lg-3">
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">{event.venue.name}</h5>
