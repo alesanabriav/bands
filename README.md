@@ -9,7 +9,9 @@ get info about your bands
 - bandsintown
 
 ## todos
-[ ] add tests
+- [ ] add tests
+- [ ] add video modal
+- [ ] improve responsive
 
 ## Run
 ```bash

@@ -1,0 +1,9 @@
+{
+  "short_name": "MyBand",
+  "name": "My Band",
+  "start_url": "/",
+	"background_color": "#ff536e",
+	"theme_color": "#ff536e",
+	"display": "standalone",
+	"lang": "en-EN"
+}

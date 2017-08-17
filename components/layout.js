@@ -5,6 +5,7 @@ export default (props) => (
   <div>
     <Head>
       <title>My Band</title>
+      <link rel="manifest" href="/static/manifest.json"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
       <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet"/>
