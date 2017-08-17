@@ -2,7 +2,7 @@
 get info about your bands
 
 ## URL
-[link now](https://bands-dktevojszc.now.sh/)
+[link now](https://bands-caouwuspkk.now.sh)
 
 ## Open apis
 - itunes
