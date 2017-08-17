@@ -12,7 +12,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "styl": "stylus -w css/app.styl -o static/css/app.css"
+    "styl": "stylus -w css/app.styl -o static/css/app.css",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -37,6 +38,8 @@
     "jest": "^20.0.4",
     "jest-babel": "^1.0.1",
     "moxios": "^0.4.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "redux-logger": "^3.0.6"
   }
 }

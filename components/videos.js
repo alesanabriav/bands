@@ -3,6 +3,15 @@ import Minigrid from 'minigrid';
 
 class Videos extends Component {
 
+  componentDidMount() {
+    this.grid = new Minigrid({
+      container: '.items',
+      item: '.item'
+    });
+
+    this.grid.mount();
+  }
+
   render() {
     let { items, loading } = this.props;
 
@@ -15,7 +24,8 @@ class Videos extends Component {
             <div key={video.trackId} className="col-lg-2">
               <div className="card card--video">
                 <div
-                  style={{backgroundImage: `url(${video.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%', opacity: '.7'}}
+                  className="card--video__bg"
+                  style={{backgroundImage: `url(${video.artworkUrl100})`}}
                 >
                 </div>
 
@@ -33,7 +43,6 @@ class Videos extends Component {
                         </g>
                     </g>
                 </svg>
-                {/* <video controls="true"  src={video.previewUrl}></video> */}
                 <div className="card-body">
                   {video.trackName}
                 </div>

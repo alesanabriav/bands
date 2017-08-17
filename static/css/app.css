@@ -98,6 +98,11 @@ video {
 .card--video:hover {
   box-shadow: 0 2px 20px #fbab7e;
 }
+.card--video__bg {
+  background-size: cover;
+  padding-top: 75%;
+  opacity: 0.7;
+}
 .card--video svg {
   position: absolute;
   left: 0;
@@ -118,6 +123,11 @@ video {
 }
 .card--album:hover {
   box-shadow: 0 2px 20px #21d4fd;
+}
+.card--album__bg {
+  background-size: cover;
+  padding-top: 75%;
+  opacity: 0.7;
 }
 .artist {
   border-radius: 0.25rem;

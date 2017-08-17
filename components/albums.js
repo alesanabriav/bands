@@ -14,10 +14,10 @@ class Albums extends Component {
             <div key={album.collectionId} className="col-lg-2">
               <div className="card card--album" >
                 <div
-                  style={{backgroundImage: `url(${album.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%', opacity: '.7'}}
+                  className="card--album__bg"
+                  style={{backgroundImage: `url(${album.artworkUrl100})`}}
                 >
                 </div>
-                <div className="card--album__overlay"></div>
                 <div className="card-body">
                   <h6>{album.collectionName}</h6>
                 </div>

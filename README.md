@@ -2,11 +2,14 @@
 get info about your bands
 
 ## URL
-[link](https://bands-dktevojszc.now.sh/)
+[link now](https://bands-dktevojszc.now.sh/)
 
 ## Open apis
 - itunes
 - bandsintown
+
+## todos
+[ ] add tests
 
 ## Run
 ```bash
