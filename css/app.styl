@@ -43,12 +43,19 @@ video
   &__title
     display: block
     margin: 20px 0
-    text-align: center
+    text-align: left
     color: #fff
 
 .card
   &--video
     border: none
+    svg
+      position: absolute
+      left: 0
+      right: 0
+      margin: auto
+      top: 50px
+      cursor: pointer
     img
       width: 100%
 
@@ -57,3 +64,8 @@ video
   margin: 20px 0
   color: #fff
   text-align: center
+
+.jumbotron
+  background-size: cover
+  h1
+    text-shadow: 0 0 5px #333

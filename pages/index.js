@@ -18,4 +18,4 @@ class Index extends Component {
   }
 }
 
-export default withRedux(store)(Index);
+export default withRedux(store, state => state)(Index);

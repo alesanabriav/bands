@@ -5,31 +5,32 @@ import { connect } from 'react-redux';
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.onSearch = this.onSearch.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+
     this.state = {
       query: ''
     }
-
   }
 
-  onSearch(e) {
+  handleChange(e) {
     this.setState({query: e.target.value});
-    clearTimeout(this.t);
-
-    this.t = setTimeout(() => {
-      const { query } = this.state;
-      this.props.onChange(query);
-    }, 300)
   }
 
+  handleSearch(e) {
+    if(e) e.preventDefault();
+    const { query } = this.state;
+    this.props.onChange(query);
+  }
 
   render() {
     return (
-      <form className="search">
+      <form className="search" onSubmit={this.handleSearch}>
         <input
           type="text"
           placeholder="Search band"
-          onChange={this.onSearch}
+          onChange={this.handleChange}
           value={this.state.query}
           className="form-control search__input"
         />
