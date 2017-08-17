@@ -29,7 +29,7 @@ class Search extends Component {
       <form className="search" onSubmit={this.handleSearch}>
         <input
           type="text"
-          placeholder="Search band"
+          placeholder="Search your favorite band"
           onChange={this.handleChange}
           value={this.state.query}
           className="form-control search__input"
