@@ -1,6 +1,11 @@
-# my band
+# My band
 get info about your bands
 
-## open apis
+## Open apis
 - itunes
 - bandsintown
+
+## Run
+```bash
+yarn dev
+```
