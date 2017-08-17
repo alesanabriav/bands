@@ -3,19 +3,18 @@ import React, { Component } from 'react';
 class Albums extends Component {
 
   render() {
-    let { albums } = this.props;
-    albums = albums.filter((albums, ind) => ind !== 0);
+    let { items, loading } = this.props;
+    const albums = items.filter((albums, ind) => ind !== 0);
 
     return (
       <section>
-        <h4 className="section__title">Albums</h4>
+        <h4 className="section__title">{loading ? 'loading...' : ''} {items.length > 0 ? 'Albums' : ''}</h4>
         <div className="row">
           {albums.map(album =>
             <div key={album.collectionId} className="col-lg-2">
               <div className="card card--album" >
                 <div
-                  className="card-img-top"
-                  style={{backgroundImage: `url(${album.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%'}}
+                  style={{backgroundImage: `url(${album.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%', opacity: '.7'}}
                 >
                 </div>
                 <div className="card--album__overlay"></div>

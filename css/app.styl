@@ -3,12 +3,14 @@ html
   height: 100%
 
 body
-  background-color: #FF3CAC
-  background-image: linear-gradient(to bottom left, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
-  background-size: contain
+  background-color: #f7f7f7
   width: 100%
   height: 100%
   font-size: 14px
+  font-family: 'Cabin', Sans-Serif
+
+h1,h2,h3,h4,h5,h6
+font-family: 'Roboto Condensed', Sans-Serif
 
 video
   max-width: 100%
@@ -16,26 +18,31 @@ video
 .app
   margin-top: 40px
   &__title
+    font-size: 60px
     text-align: center
-    color: #fff
+    color: #ff536e
     margin-bottom: 20px
 
 .search
   width: 50%
   margin: 0 auto
+
   &__input
     background: #fff
     text-align: center
-    background: rgba(0,0,0,.6)
-    box-shadow: 0 0 5px rgba(0,0,0,.2)
+    box-shadow: 0 0 5px rgba(0,0,0,.02)
     border: none
-    color: #fff
+    color: #ff536e
+    height: 45px
+    font-size: 18px
     transition: all .3s ease-in-out
+
     &:focus
+      color: #ff536e
       box-shadow: none
       outline: none
-      background: rgba(0,0,0,.7)
-      box-shadow: 0 5px 20px rgba(0,0,0,.3)
+      box-shadow: 0 5px 20px rgba(0,0,0,.09)
+      opacity: .9
 
 .section
   margin: 20px 0
@@ -43,16 +50,43 @@ video
   &__title
     display: block
     margin: 20px 0
+    font-size: 22px
     text-align: left
-    color: #fff
+    color: #3f4957
+    font-weight: 600
 
 .card
   border: none
-  &--video
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  box-shadow: 0 0 3px rgba(0,0,0,.1)
+  transition: all .3s ease-in-out
+
+  &:hover
+    transform: scale(1.02) translateY(-5px)
+
+  &--event
+    color: #fff
     margin-bottom: 30px
-    
+    background-color: #FBDA61
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)
+    &:hover
+      box-shadow: 0 2px 20px #FBDA61
+    .card-title
+      font-weight: 600
+    .card-subtitle
+      font-size: 14px
+      font-style: italic
+      font-weight: 100
+    p
+      color: #f4f4f4
+      font-size: 12px
+
+  &--video
+    background-color: #FBAB7E
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)
+    margin-bottom: 30px
+    &:hover
+      box-shadow: 0 2px 20px #FBAB7E
+
     svg
       position: absolute
       left: 0
@@ -62,21 +96,15 @@ video
       cursor: pointer
     img
       width: 100%
+
   &--album
-    background-color: #08AEEA
-    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%)
+    background-color: #21D4FD
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)
     background-size: cover
     margin-bottom: 30px
-
-    &__overlay
-      position: absolute
-      top: 0
-      opacity: .3
-      width: 100%
-      height: 100%
-      background-color: #08AEEA
-      background-color: #D9AFD9;
-      background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    color: #fff
+    &:hover
+      box-shadow: 0 2px 20px #21D4FD
 
 
 .artist
@@ -87,5 +115,22 @@ video
 
 .jumbotron
   background-size: cover
+  position: relative
+  padding: 40px 0
+
   h1
     text-shadow: 0 0 5px #333
+
+  .container
+    position: relative
+    z-index: 1
+
+  &__overlay
+    background-color: #FF3CAC
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
+    position: absolute
+    top: 0
+    left 0
+    width: 100%
+    height: 100%
+    opacity: .7

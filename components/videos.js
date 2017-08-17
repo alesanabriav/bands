@@ -4,17 +4,18 @@ import Minigrid from 'minigrid';
 class Videos extends Component {
 
   render() {
-    const {props} = this;
+    let { items, loading } = this.props;
+
     return (
       <section className="section">
-        <h4 className="section__title">Videos</h4>
+        <h4 className="section__title">{loading ? 'loading...' : ''} {items.length > 0 ? 'Videos' : ''}</h4>
         <div className="row cards__video">
 
-          {props.videos.map(video =>
+          {items.map(video =>
             <div key={video.trackId} className="col-lg-2">
               <div className="card card--video">
                 <div
-                  style={{backgroundImage: `url(${video.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%'}}
+                  style={{backgroundImage: `url(${video.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%', opacity: '.7'}}
                 >
                 </div>
 
