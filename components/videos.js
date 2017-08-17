@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Minigrid from 'minigrid';
+import VideoModal from './video';
 
 class Videos extends Component {
 
@@ -10,6 +11,10 @@ class Videos extends Component {
     });
 
     this.grid.mount();
+  }
+
+  toggleModal() {
+
   }
 
   render() {
@@ -29,7 +34,7 @@ class Videos extends Component {
                 >
                 </div>
 
-                <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <svg onClick={this.toggleModal} width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <defs>
                         <linearGradient x1="89.4140625%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
                             <stop stopColor="#FF3CAC" offset="0%"></stop>
