@@ -47,8 +47,12 @@ video
     color: #fff
 
 .card
+  border: none
   &--video
-    border: none
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    margin-bottom: 30px
+    
     svg
       position: absolute
       left: 0
@@ -58,6 +62,22 @@ video
       cursor: pointer
     img
       width: 100%
+  &--album
+    background-color: #08AEEA
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%)
+    background-size: cover
+    margin-bottom: 30px
+
+    &__overlay
+      position: absolute
+      top: 0
+      opacity: .3
+      width: 100%
+      height: 100%
+      background-color: #08AEEA
+      background-color: #D9AFD9;
+      background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
 
 .artist
   border-radius: .25rem

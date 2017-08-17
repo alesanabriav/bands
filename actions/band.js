@@ -16,6 +16,18 @@ export function searchArtist(query) {
 
 }
 
+export function searchArtistItunes(query) {
+
+  const res = (dispatch) => {
+    return request
+    .get(`${endpointItunes}/search?term=${query}&entity=musicArtist&limit=1`)
+    .then(res => res.data)
+    .then(res => dispatch({ type: `FETCH_${TYPE}_ARTIST_ID`, payload: res.results}));
+  }
+
+  return res;
+}
+
 export function searchVideos(query) {
 
   const res = (dispatch) => {
@@ -28,7 +40,7 @@ export function searchVideos(query) {
   return res;
 }
 
-export function searchAlbums(query) {
+export function getAlbums(id) {
 
   const res = (dispatch) => {
     request

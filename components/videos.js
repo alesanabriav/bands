@@ -4,12 +4,7 @@ import Minigrid from 'minigrid';
 class Videos extends Component {
 
   componentDidMount() {
-    var grid = new Minigrid({
-      container: '.cards__video',
-      item: '.card--video'
-    });
 
-    grid.mount();
   }
 
   render() {
@@ -20,9 +15,12 @@ class Videos extends Component {
         <div className="row cards__video">
 
           {props.videos.map(video =>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <div className="card card--video">
-                <video src={video.previewUrl} poster={video.artworkUrl100} className="img-fluid"></video>
+                <div
+                  style={{backgroundImage: `url(${video.artworkUrl100})`, backgroundSize: 'cover', paddingTop: '75%'}}
+                >
+                </div>
 
                 <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <defs>

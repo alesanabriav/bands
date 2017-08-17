@@ -2,7 +2,7 @@ const TYPE = 'BAND';
 
 const initialState = {
 	artist: {},
-	artistItunesId: null,
+	artistId: null,
 	videos: [],
 	events: [],
 	albums: []
@@ -14,6 +14,10 @@ function bandReducer(state = initialState, action) {
     case `FETCH_${TYPE}_ARTIST`:
 			return { ...state, artist: action.payload };
       break;
+		case `FETCH_${TYPE}_ARTIST_ID`:
+			const { artistId } = action.payload[0];
+			return { ...state, artistId };
+	    break;
 		case `FETCH_${TYPE}_VIDEOS`:
 			return { ...state, videos: action.payload };
 	  	break;
