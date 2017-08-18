@@ -22,18 +22,11 @@ class VideoModal extends Component {
     if(this.video) {
       this.video.pause();
     }
-
   }
 
   render() {
     const { video, show } = this.props;
-    console.log(show);
-    if(show) {
-
-      this.playVideo();
-    } else {
-      this.stopVideo();
-    }
+    show ? this.playVideo() : this.stopVideo();
 
     return (
       <div className={show ? "video-modal video-modal--show" : "video-modal"}>

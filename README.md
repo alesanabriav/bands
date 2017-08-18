@@ -1,24 +1,19 @@
 # My band
-get info about your bands
+get info about your bands, like albums, videos and events.
 
 ## URL
-[link now](https://bands-caouwuspkk.now.sh)
+[link now](https://bands-ulfesomcmw.now.sh)
 
 ## Open apis
 - itunes
 - bandsintown
 
-## todos
-- [x] add tests
-- [x] add video modal
-- [ ] improve responsive
-
-## Run dev
-```bash
-yarn dev
-```
-
 ## Run tests
 ```bash
 yarn test
+```
+
+## Run local
+```bash
+yarn dev
 ```
