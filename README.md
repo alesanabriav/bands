@@ -2,7 +2,7 @@
 get info about your bands, like albums, videos and events.
 
 ## URL
-[link now](https://bands-ulfesomcmw.now.sh)
+[now](https://bands-gxnwmclekq.now.sh)
 
 ## Open apis
 - itunes
