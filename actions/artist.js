@@ -7,11 +7,12 @@ export function searchArtist(query) {
 
   const res = (dispatch) => {
     dispatch({ type: `FETCHING_${TYPE}`});
-    
+
     return request
     .get(`${endpointBandsintown}/artists/${query}/?app_id=developersoul`)
     .then(res => res.data)
-    .then(res => dispatch({ type: `FETCH_${TYPE}`, payload: res}));
+    .then(res => dispatch({ type: `FETCH_${TYPE}`, payload: res}))
+    .catch(err => dispatch({ type: `FAIL_${TYPE}`, payload: err}));
   }
 
   return res;

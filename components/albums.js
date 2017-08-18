@@ -8,10 +8,15 @@ class Albums extends Component {
 
     return (
       <section>
-        <h4 className="section__title">{loading ? 'loading...' : ''} {items.length > 0 ? 'Albums' : ''}</h4>
+        {loading ?
+          <div className="section__loading jumbotron">loading...</div>
+          : ''}
+        <h4 className="section__title"> {items.length > 0 ? 'Albums' : ''}</h4>
         <div className="row">
           {albums.map(album =>
+
             <div key={album.collectionId} className="col-lg-2">
+              <a href={album.collectionViewUrl}>
               <div className="card card--album" >
                 <div
                   className="card--album__bg"
@@ -22,6 +27,7 @@ class Albums extends Component {
                   <h6>{album.collectionName}</h6>
                 </div>
               </div>
+                </a>
             </div>
           )}
         </div>

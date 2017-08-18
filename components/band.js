@@ -17,7 +17,6 @@ class Band extends Component {
 
   componentDidMount() {
     let { dispatch } = this.props;
-    console.log('actions', actionsCreators);
     this.actions = bindActionCreators(actionsCreators, dispatch);
   }
 
@@ -38,7 +37,7 @@ class Band extends Component {
     return (
       <div>
         <Search onChange={this.handleQuery} />
-        <Artist artist={artist.item}/>
+        <Artist artist={artist.item} loading={artist.loading}/>
         <Albums {...albums}/>
         <Videos {...videos}/>
         <Events {...events}/>

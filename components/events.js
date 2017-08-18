@@ -18,7 +18,10 @@ class Events extends Component {
 
     return (
       <section className="section">
-        <h4 className="section__title">{loading ? 'loading...' : ''} {items.length > 0 ? 'Events' : ''}</h4>
+        {loading ?
+          <div className="section__loading jumbotron">loading...</div>
+          : ''}
+        <h4 className="section__title">{items.length > 0 ? 'Events' : ''}</h4>
         <div className="row items">
           {items.map(event =>
             <div key={event.id} className="col-lg-2 item">

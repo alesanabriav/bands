@@ -9,16 +9,16 @@ body {
   font-size: 14px;
   font-family: 'Cabin', Sans-Serif;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-font-family: 'Roboto Condensed',
-Sans-Serif,
-video {
-  max-width: 100%;
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+font-family: 'Roboto Condensed':hover,
+Sans-Serif:hover,
+a:hover {
+  text-decoration: none;
 }
 .app {
   margin-top: 40px;
@@ -61,6 +61,15 @@ video {
   color: #3f4957;
   font-weight: 600;
 }
+.section__loading {
+  background-color: #4158d0;
+  background-image: linear-gradient(45deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  transition: all 1s ease-in-out;
+  animation: preload 2s infinite;
+}
 .card {
   border: none;
   box-shadow: 0 0 3px rgba(0,0,0,0.1);
@@ -94,6 +103,7 @@ video {
   background-color: #fbab7e;
   background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .card--video:hover {
   box-shadow: 0 2px 20px #fbab7e;
@@ -102,6 +112,9 @@ video {
   background-size: cover;
   padding-top: 75%;
   opacity: 0.7;
+}
+.card--video__bg:hover {
+  opacity: 0.2;
 }
 .card--video svg {
   position: absolute;
@@ -128,6 +141,10 @@ video {
   background-size: cover;
   padding-top: 75%;
   opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.card--album__bg:hover {
+  opacity: 0.2;
 }
 .artist {
   border-radius: 0.25rem;
@@ -156,4 +173,68 @@ video {
   width: 100%;
   height: 100%;
   opacity: 0.7;
+}
+.video-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 998;
+  max-width: 800px;
+  height: 500px;
+  display: none;
+}
+.video-modal--show {
+  display: block;
+}
+.video-modal video {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 0 20px #fff;
+}
+.video-modal__overlay {
+  background-color: #fee140;
+  background-image: linear-gradient(45deg, #fee140 0%, #fa709a 100%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 997;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+@-moz-keyframes preload {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes preload {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes preload {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes preload {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }

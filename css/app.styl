@@ -12,8 +12,11 @@ body
 h1,h2,h3,h4,h5,h6
 font-family: 'Roboto Condensed', Sans-Serif
 
-video
-  max-width: 100%
+
+
+a
+  &:hover
+    text-decoration: none
 
 .app
   margin-top: 40px
@@ -44,6 +47,13 @@ video
       box-shadow: 0 5px 20px rgba(0,0,0,.09)
       opacity: .9
 
+@keyframes preload
+  from
+    opacity: .7
+  to
+    opacity: 1
+
+
 .section
   margin: 20px 0
 
@@ -54,6 +64,15 @@ video
     text-align: left
     color: #3f4957
     font-weight: 600
+  &__loading
+    background-color: #4158D0
+    background-image: linear-gradient(45deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
+    text-align: center
+    color: #fff
+    font-size: 20px
+    transition: all 1s ease-in-out
+    animation: preload 2s infinite
+
 
 .card
   border: none
@@ -84,13 +103,16 @@ video
     background-color: #FBAB7E
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)
     margin-bottom: 30px
+    cursor: pointer
     &:hover
       box-shadow: 0 2px 20px #FBAB7E
-      
+
     &__bg
       background-size: cover
       padding-top: 75%
       opacity: .7
+      &:hover
+        opacity: .2
 
     svg
       position: absolute
@@ -115,6 +137,9 @@ video
       background-size: cover
       padding-top: 75%
       opacity: .7
+      transition: opacity .3s ease-in-out
+      &:hover
+        opacity: .2
 
 
 .artist
@@ -144,3 +169,32 @@ video
     width: 100%
     height: 100%
     opacity: .7
+
+.video-modal
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  z-index: 998
+  max-width: 800px
+  height: 500px
+  display: none
+  &--show
+    display: block
+  video
+    width: 100%
+    position: relative
+    z-index: 999
+    box-shadow: 0 0 20px  rgba(255,255,255,1)
+  &__overlay
+    background-color: #FEE140
+    background-image: linear-gradient(45deg, #FEE140 0%, #FA709A 100%)
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 997
+    width: 100%
+    height: 100%
+    opacity: .9

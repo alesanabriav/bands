@@ -18,7 +18,10 @@ class Videos extends Component {
 
     return (
       <section className="section">
-        <h4 className="section__title">{loading ? 'loading...' : ''} {items.length > 0 ? 'Videos' : ''}</h4>
+        {loading ?
+          <div className="section__loading jumbotron">loading...</div>
+          : ''}
+        <h4 className="section__title">{items.length > 0 ? 'Videos' : ''}</h4>
         <div className="row cards__video">
 
           {items.map(video =>

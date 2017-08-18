@@ -5,32 +5,30 @@ class Video extends Component {
 
   constructor(props) {
     super(props);
-
+    this.toggleModal = this.toggleModal.bind(this);
     this.state = {
       show: false
     }
   }
 
-  toggleModal () {
+  toggleModal() {
     this.setState({show: !this.state.show});
   }
 
   render() {
     const { video } = this.props;
+    const { show } = this.state;
 
     return (
-      <div>
-        <VideoModal video={video} />
-
         <div className="col-lg-2">
-          <div className="card card--video">
+          <div className="card card--video" onClick={this.toggleModal}>
             <div
               className="card--video__bg"
               style={{backgroundImage: `url(${video.artworkUrl100})`}}
             >
             </div>
 
-            <svg onClick={this.toggleModal} width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <defs>
                     <linearGradient x1="89.4140625%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
                         <stop stopColor="#FF3CAC" offset="0%"></stop>
@@ -48,8 +46,8 @@ class Video extends Component {
               {video.trackName}
             </div>
           </div>
+            <VideoModal video={video} show={show} onClose={this.toggleModal} />
         </div>
-      </div>
     )
   }
 }
