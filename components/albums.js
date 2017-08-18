@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import Loading from './loading';
+import Fail from './fail';
 
 class Albums extends Component {
 
   render() {
-    let { items, loading } = this.props;
+    let { items, loading, fail } = this.props;
     const albums = items.filter((albums, ind) => ind !== 0);
 
     return (
       <section>
-        {loading ?
-          <div className="section__loading jumbotron">loading...</div>
-          : ''}
+        <Loading loading={loading} />
+        <Fail fail={fail} />
+        
         <h4 className="section__title"> {items.length > 0 ? 'Albums' : ''}</h4>
         <div className="row">
           {albums.map(album =>

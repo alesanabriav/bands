@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Minigrid from 'minigrid';
 import Video from './video';
+import Loading from './loading';
+import Fail from './fail';
 
 class Videos extends Component {
 
@@ -14,13 +16,13 @@ class Videos extends Component {
   }
 
   render() {
-    let { items, loading } = this.props;
+    let { items, loading, fail } = this.props;
 
     return (
       <section className="section">
-        {loading ?
-          <div className="section__loading jumbotron">loading...</div>
-          : ''}
+        <Loading loading={loading} />
+        <Fail fail={fail} />
+
         <h4 className="section__title">{items.length > 0 ? 'Videos' : ''}</h4>
         <div className="row cards__video">
 

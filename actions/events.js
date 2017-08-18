@@ -10,7 +10,7 @@ export function searchEvents(query) {
     .get(`${endpointBandsintown}/artists/${query}/events?app_id=developersoul`)
     .then(res => res.data)
     .then(res => dispatch({ type: `FETCH_${TYPE}`, payload: res}))
-      .catch(err => dispatch({ type: `FAIL_${TYPE}`, payload: err}));
+    .catch(err => dispatch({ type: `FAIL_${TYPE}`, payload: err}));
   }
 
   return res;

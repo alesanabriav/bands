@@ -2,7 +2,8 @@ const TYPE = 'VIDEOS';
 
 const initialState = {
 	items: [],
-  loading: false
+  loading: false,
+	fail: false
 };
 
 function videosReducer(state = initialState, action) {
@@ -14,6 +15,9 @@ function videosReducer(state = initialState, action) {
     case `FETCHING_${TYPE}`:
   		return { ...state, loading: true};
   		break;
+		case `FAIL_${TYPE}`:
+	  	return { ...state, fail: true, loading: false };
+	  	break;
     default:
     	return state;
   }

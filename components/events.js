@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import dateFns from 'date-fns';
 import Minigrid from 'minigrid';
+import Loading from './loading';
+import Fail from './fail';
 
 class Events extends Component {
 
@@ -14,13 +16,12 @@ class Events extends Component {
   }
 
   render() {
-    const { items, loading } = this.props;
+    const { items, loading, fail } = this.props;
 
     return (
       <section className="section">
-        {loading ?
-          <div className="section__loading jumbotron">loading...</div>
-          : ''}
+        <Loading loading={loading} />
+        <Fail fail={fail} />
         <h4 className="section__title">{items.length > 0 ? 'Events' : ''}</h4>
         <div className="row items">
           {items.map(event =>

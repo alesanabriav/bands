@@ -70,6 +70,15 @@ a:hover {
   transition: all 1s ease-in-out;
   animation: preload 2s infinite;
 }
+.section__fail {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  background-image: linear-gradient(to left, #fd705b 0%, #f94b54 100%);
+}
+.section__fail a {
+  color: #ffc0cb;
+}
 .card {
   border: none;
   box-shadow: 0 0 3px rgba(0,0,0,0.1);

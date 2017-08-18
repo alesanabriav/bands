@@ -37,10 +37,10 @@ class Band extends Component {
     return (
       <div>
         <Search onChange={this.handleQuery} />
-        <Artist artist={artist.item} loading={artist.loading}/>
-        <Albums {...albums}/>
-        <Videos {...videos}/>
-        <Events {...events}/>
+        <Artist {...artist} />
+        <Albums {...albums} />
+        <Videos {...videos} />
+        <Events {...events} />
       </div>
     )
   }

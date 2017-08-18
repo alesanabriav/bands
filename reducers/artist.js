@@ -3,7 +3,8 @@ const TYPE = 'ARTIST';
 const initialState = {
 	item: {},
 	id: null,
-	loading: false
+	loading: false,
+	fail: false
 };
 
 function artistReducer(state = initialState, action) {
@@ -19,6 +20,9 @@ function artistReducer(state = initialState, action) {
 			const { artistId } = action.payload[0];
 			return { ...state, id: artistId };
 	    break;
+		case `FAIL_${TYPE}`:
+		  return { ...state, fail: true, loading: false };
+		  break;
 		default:
     	return state;
   }

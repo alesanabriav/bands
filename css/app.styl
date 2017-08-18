@@ -12,8 +12,6 @@ body
 h1,h2,h3,h4,h5,h6
 font-family: 'Roboto Condensed', Sans-Serif
 
-
-
 a
   &:hover
     text-decoration: none
@@ -72,7 +70,13 @@ a
     font-size: 20px
     transition: all 1s ease-in-out
     animation: preload 2s infinite
-
+  &__fail
+    text-align: center
+    color: #fff
+    font-size: 20px
+    background-image: linear-gradient(to left, #FD705B 0%, #F94B54 100%)
+    a
+      color: pink
 
 .card
   border: none

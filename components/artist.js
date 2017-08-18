@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import Loading from './loading';
+import Fail from './fail';
 
-export default (props) => {
+export default ({item, loading, fail}) => {
+
   return (
     <div>
-      {props.loading ?
-        <div className="section__loading jumbotron">loading...</div>
-        : ''}
-      {Object.keys(props.artist).length > 0 ?
-        <div className="jumbotron jumbotron-fluid artist" style={{background: `url(${props.artist.image_url})`}}>
+      <Loading loading={loading} />
+      <Fail fail={fail} />
+      
+      {Object.keys(item).length > 0 ?
+        <div className="jumbotron jumbotron-fluid artist" style={{background: `url(${item.image_url})`}}>
           <div className="jumbotron__overlay"></div>
           <div className="container">
-            <h1 style={{color: '#fff'}}>{props.artist.name}</h1>
+            <h1 style={{color: '#fff'}}>{item.name}</h1>
           </div>
         </div>
       : ''}
