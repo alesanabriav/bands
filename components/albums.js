@@ -18,7 +18,7 @@ class Albums extends Component {
           {albums.map(album =>
 
             <div key={album.collectionId} className="col-lg-2 col-md-4">
-              <a href={album.collectionViewUrl}>
+              <a target="new" href={album.collectionViewUrl}>
               <div className="card card--album" >
                 <div
                   className="card--album__bg"
