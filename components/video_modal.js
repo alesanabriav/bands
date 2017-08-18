@@ -4,17 +4,22 @@ class VideoModal extends Component {
   constructor(props) {
     super(props);
     this.handleClose = this.handleClose.bind(this);
+    this.playVideo = this.playVideo.bind(this);
   }
 
   handleClose() {
     this.props.onClose();
   }
 
+  playVideo() {
+    this.video.volume = 0.1;
+    this.video.play();
+  }
+
   render() {
     const { video, show } = this.props;
     if(this.video && show) {
-      this.video.volume = 0.1;
-      this.video.play();
+      this.playVideo();
     }
 
     return (
