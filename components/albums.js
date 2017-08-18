@@ -12,12 +12,12 @@ class Albums extends Component {
       <section>
         <Loading loading={loading} />
         <Fail fail={fail} />
-        
+
         <h4 className="section__title"> {items.length > 0 ? 'Albums' : ''}</h4>
         <div className="row">
           {albums.map(album =>
 
-            <div key={album.collectionId} className="col-lg-2">
+            <div key={album.collectionId} className="col-lg-2 col-md-4">
               <a href={album.collectionViewUrl}>
               <div className="card card--album" >
                 <div

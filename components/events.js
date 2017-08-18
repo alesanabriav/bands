@@ -25,7 +25,7 @@ class Events extends Component {
         <h4 className="section__title">{items.length > 0 ? 'Events' : ''}</h4>
         <div className="row items">
           {items.map(event =>
-            <div key={event.id} className="col-lg-2 item">
+            <div key={event.id} className="col-lg-2 col-md-4 item">
               <div className="card card--event">
                 <div className="card-body">
                   <h6 className="card-title">{event.venue.name}</h6>

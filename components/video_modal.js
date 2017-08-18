@@ -12,14 +12,27 @@ class VideoModal extends Component {
   }
 
   playVideo() {
-    this.video.volume = 0.1;
-    this.video.play();
+    if(this.video) {
+      this.video.volume = 0.1;
+      this.video.play();
+    }
+  }
+
+  stopVideo() {
+    if(this.video) {
+      this.video.pause();
+    }
+
   }
 
   render() {
     const { video, show } = this.props;
-    if(this.video && show) {
+    console.log(show);
+    if(show) {
+
       this.playVideo();
+    } else {
+      this.stopVideo();
     }
 
     return (

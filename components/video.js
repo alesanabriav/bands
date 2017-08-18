@@ -20,7 +20,7 @@ class Video extends Component {
     const { show } = this.state;
 
     return (
-        <div className="col-lg-2">
+        <div className="col-lg-2 col-md-4">
           <div className="card card--video" onClick={this.toggleModal}>
             <div
               className="card--video__bg"

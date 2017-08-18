@@ -9,11 +9,16 @@ get info about your bands
 - bandsintown
 
 ## todos
-- [ ] add tests
-- [ ] add video modal
+- [x] add tests
+- [x] add video modal
 - [ ] improve responsive
 
-## Run
+## Run dev
 ```bash
 yarn dev
+```
+
+## Run tests
+```bash
+yarn test
 ```
