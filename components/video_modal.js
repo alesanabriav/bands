@@ -12,7 +12,7 @@ class VideoModal extends Component {
 
   render() {
     const { video, show } = this.props;
-    if(show) {
+    if(this.video && show) {
       this.video.volume = 0.1;
       this.video.play();
     }
